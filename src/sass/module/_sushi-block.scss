@@ -1,0 +1,228 @@
+@use "global" as *;
+
+
+.sushi-block {
+  position: relative;
+}
+
+
+.sushi-block__header {
+  text-align: center;
+  margin-top: rem(34);
+}
+
+
+.sushi-block:first-of-type .sushi-block__header {
+  margin-top: 0;
+}
+
+
+.sushi-block__title {
+  position: relative;
+  display: inline-block;
+  font-size: rem(24);
+  font-family: $base-font-family;
+  font-weight: $bold;
+  color: #40210F;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+
+  @include mq(md) {
+    font-size: rem(36);
+    width: rem(400);
+  }
+}
+
+
+.sushi-block__title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/sushi-title_bg.png);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.sushi-block__body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: rem(24);
+
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
+
+
+.sushi-block__image {
+  width: 100%;
+  aspect-ratio: 550 / 158;
+  object-fit: cover;
+
+  @include mq(md) {
+    width: 50%;
+  }
+}
+
+
+.sushi-block--maguro .sushi-block__body .sushi-block__image {
+  width: 100%;
+  aspect-ratio: 648 / 188;
+
+  @include mq(md) {
+    width: 56%;
+  }
+}
+
+
+.sushi-block--maguro .sushi-block__body .sushi-block__image:nth-child(2) {
+  width: 100%;
+  aspect-ratio: 502 / 190;
+
+  @include mq(md) {
+    width: 44%;
+  }
+}
+
+
+.sushi-block__body--four-three .sushi-block__image:nth-child(n + 3) {
+  width: 100%;
+  aspect-ratio: 814 / 182;
+
+  @include mq(md) {
+    width: 77%;
+  }
+}
+
+
+.sushi-block__body--two-row .sushi-block__image {
+  width: 100%;
+  aspect-ratio: 814 / 182;
+
+
+  @include mq(md) {
+    width: 79.5%;
+  }
+}
+
+
+.sushi-block__body--two-row .sushi-block__image:nth-child(3) {
+  width: 100%;
+  aspect-ratio: 678 / 240;
+
+  @include mq(md) {
+    width: 61.7%;
+  }
+}
+
+
+.sushi-block--salmon::before {
+  content: "";
+  position: absolute;
+  top: rem(36);
+  left: rem(-16);
+  background-image: url(../images/common/sushi-block_bg1.png);
+  background-size: cover;
+  aspect-ratio: 214 / 43;
+  width: rem(214);
+  z-index: -1;
+}
+
+
+.sushi-block--shrimp-crab::before {
+  content: "";
+  position: absolute;
+  bottom: rem(-30);
+  left: rem(-66);
+  background-image: url(../images/common/sushi-block_bg2.png);
+  background-size: cover;
+  aspect-ratio: 256 / 122;
+  width: rem(256);
+  z-index: -1;
+}
+
+
+.sushi-block--squid-octopus::before {
+  content: "";
+  position: absolute;
+  top: rem(-33);
+  right: rem(-68);
+  background-image: url(../images/common/sushi-block_bg3.png);
+  background-size: cover;
+  aspect-ratio: 203 / 66;
+  width: rem(203);
+  z-index: -1;
+}
+
+
+.sushi-block--shellfish-blue::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: rem(-120);
+  background-image: url(../images/common/sushi-block_bg4.png);
+  background-size: cover;
+  aspect-ratio: 224 / 224;
+  width: rem(224);
+  z-index: -1;
+}
+
+
+.sushi-block--shellfish-blue::after {
+  content: "";
+  position: absolute;
+  top: rem(144);
+  right: rem(-30);
+  background-image: url(../images/common/sushi-block_bg5.png);
+  background-size: cover;
+  aspect-ratio: 266 / 122;
+  width: rem(266);
+  z-index: -1;
+}
+
+
+.sushi-block--gunkan::before {
+  content: "";
+  position: absolute;
+  top: rem(208);
+  left: rem(-62);
+  background-image: url(../images/common/sushi-block_bg6.png);
+  background-size: cover;
+  aspect-ratio: 266 / 122;
+  width: rem(266);
+  z-index: -1;
+}
+
+
+.sushi-block--rolls::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: rem(-142);
+  background-image: url(../images/common/sushi-block_bg7.png);
+  background-size: cover;
+  aspect-ratio: 224 / 224;
+  width: rem(224);
+  z-index: -1;
+}
+
+
+.sushi-block--rolls::after {
+  content: "";
+  position: absolute;
+  top: rem(200);
+  left: 0;
+  background-image: url(../images/common/sushi-block_bg8.png);
+  background-size: cover;
+  aspect-ratio: 203 / 64;
+  width: rem(203);
+  z-index: -1;
+}

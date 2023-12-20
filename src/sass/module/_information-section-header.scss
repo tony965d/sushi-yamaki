@@ -1,0 +1,35 @@
+@use "global" as *;
+
+
+.information-section-header {
+  text-align: center;
+}
+
+
+.information-section-header__title {
+  position: relative;
+  display: inline-block;
+  font-size: rem(26);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  color: #4D4F4F;
+  line-height: 1.5;
+  padding-bottom: rem(26);
+  
+  @include mq(md) {
+    font-size: rem(38);
+    line-height: 1.0;
+  }
+}
+
+
+.information-section-header__title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: rem(1);
+  width: rem(92);
+  background-color: #831F11;
+}

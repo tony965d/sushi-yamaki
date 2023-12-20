@@ -1,0 +1,36 @@
+@use "global" as *;
+
+
+.side-archive {
+  padding: rem(8) rem(14);
+  margin-left: rem(10);
+  border-left: solid 1px $black;
+}
+
+
+.side-archive__item {
+  margin-top: rem(18);
+}
+
+
+.side-archive__item:first-of-type {
+  margin-top: 0;
+}
+
+
+.side-archive__year {
+  position: relative;
+  display: block;
+	font-size: rem(10);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: $bold;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  // padding-left: rem(32);
+}
+
+
+
+

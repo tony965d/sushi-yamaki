@@ -1,0 +1,36 @@
+@use "global" as *;
+
+
+.side-categories {
+  padding: rem(8) rem(14);
+  margin-left: rem(10);
+  border-left: solid 1px $black;
+}
+
+
+.side-categories__category {
+  margin-top: rem(18);
+}
+
+
+.side-categories__category:first-of-type {
+  margin-top: 0;
+}
+
+
+.side-categories__name {
+  position: relative;
+  display: block;
+	font-size: rem(10);
+  font-family: $base-font-family;
+  font-weight: $bold;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  // padding-left: rem(32);
+}
+
+
+
+

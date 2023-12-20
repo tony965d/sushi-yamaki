@@ -1,0 +1,55 @@
+@use "global" as *;
+
+
+.commitment {
+  position: relative;
+  padding-top: rem(60);
+  padding-bottom: rem(26);
+  
+  @include mq(md) {
+    padding-top: rem(126);
+  }
+}
+
+
+.commitment::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/commitment_bg.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.commitment__inner.inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(895);
+  }
+}
+
+
+.commitment__images {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  margin-top: rem(60);
+
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(70);
+    margin-top: rem(50);
+  }
+}
+
+
+.commitment__button {
+  text-align: center;
+  margin-top: rem(38);
+}

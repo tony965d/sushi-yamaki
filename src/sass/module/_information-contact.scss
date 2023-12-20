@@ -1,0 +1,129 @@
+@use "global" as *;
+
+
+.information-contact {
+  position: relative;
+  padding-top: rem(48);
+}
+
+.information-contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/information-contact_bg.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+
+.information-contact__inner.inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(1150);
+  }
+}
+
+
+.information-contact__form {
+  margin-top: rem(80);
+  
+  @include mq(md) {
+    margin-top: rem(92);
+  }
+}
+
+
+.information-contact__form-title {
+  font-size: rem(24);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  color: #3A3939;
+  line-height: 1.0;
+  text-align: center;
+  
+  @include mq(md) {
+    font-size: rem(38);
+  }
+}
+
+
+.information-contact__form-subtitle {
+  font-size: rem(12);
+  font-family: $third-font-family;
+  font-weight: $regular;
+  color: #3A3939;
+  line-height: 1.5;
+  letter-spacing: 0.24em;
+  text-align: center;
+  margin-top: rem(38);
+  
+  @include mq(md) {
+    line-height: 1.0;
+  }
+}
+
+
+.information-contact__form-wrapper {
+  margin-top: rem(70);
+}
+
+
+.information-contact__form-body {
+  margin: 0 auto;
+
+  @include mq(md) {
+    max-width: rem(770);
+  }
+}
+
+
+.information-contact-tel {
+  margin-top: rem(84);
+}
+
+
+.information-contact-tel__text {
+  font-size: rem(12);
+  font-family: $third-font-family;
+  font-weight: $regular;
+  color: $black;
+  line-height: 1.8;
+  letter-spacing: 0.24em;
+  text-align: center;
+  margin-top: rem(22);
+}
+
+
+.information-contact-tel__box {
+  display: flex;
+  justify-content: center;
+  gap: rem(12);
+  margin-top: rem(50);
+}
+
+
+.information-contact-tel__icon {
+  aspect-ratio: 38 / 46;
+  object-fit: cover;
+  width: rem(38);
+}
+
+
+.information-contact-tel__number {
+  font-size: rem(40);
+  font-family: $base-font-family;
+  font-weight: $medium;
+  color: #383737;
+  line-height: 1.0;
+  letter-spacing: 0.08em;
+}
+
+
+.information-contact__logo-area {
+  margin-top: rem(100);
+}

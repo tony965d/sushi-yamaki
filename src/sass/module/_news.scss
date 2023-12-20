@@ -1,0 +1,67 @@
+@use "global" as *;
+
+
+.news {
+  position: relative;
+  padding-bottom: rem(80);
+  
+  @include mq(md) {
+    padding-bottom: rem(126);
+  }
+}
+
+
+.news::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/news_bg.jpg);
+  background-size: inherit;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+
+.news__inner.inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(1150);
+  }
+}
+
+
+.news__body {
+  position: relative;
+  padding-top: rem(20);
+}
+
+
+.news__body::before {
+  
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/common/news-cards_bg.jpg);
+    background-size: cover;
+    // background-position: center;
+    width: 100%;
+    height: 80%;
+    z-index: -1;
+  }
+} 
+
+
+.news__button {
+  text-align: center;
+  margin-top: rem(60);
+  
+  @include mq(md) {
+    margin-top: rem(34);
+  }
+}
+

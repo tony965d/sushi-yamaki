@@ -1,0 +1,140 @@
+@use "global" as *;
+
+
+.unit-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(60);
+  
+  @include mq(md) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: rem(68);
+  }
+}
+
+
+.unit-block__image {
+  aspect-ratio: 546 / 364;
+  object-fit: cover;
+  width: 100%;
+  
+  @include mq(md) {
+    width: rem(546);
+  }
+}
+
+
+.unit-block__body {
+  display: flex;
+}
+
+
+.unit-block__text {
+  font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  color: #563407;
+  line-height: 2.7;
+  letter-spacing: 0.08em;
+  writing-mode: vertical-rl;
+  
+  @include mq(md) {
+    font-size: rem(27);
+  }
+}
+
+
+.unit-block--commitment {
+  
+  @include mq(md) {
+    flex-direction: row-reverse;
+    gap: rem(66);
+  }
+}
+
+
+.unit-block--commitment .unit-block__body {
+  position: relative;
+}
+
+
+.unit-block--commitment .unit-block__body::before {
+  content: "";
+  position: absolute;
+  top: 48%;
+  left: 20%;
+  background-image: url(../images/common/pickup_icon.png);
+  background-size: cover;
+  aspect-ratio: 230 / 230;
+  width: rem(230);
+  
+  @include mq(md) {
+    left: clamp(130px, 15vw, 170px);
+  }
+}
+
+
+.unit-block--commitment .unit-block__text {
+  font-size: rem(16);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  color: #4D4F4F;
+  line-height: 2.5;
+  letter-spacing: 0.38em;
+
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}
+
+
+.unit-block--commitment .unit-block__image {
+  aspect-ratio: 620 / 414;
+  object-fit: cover;
+  width: 100%;
+  
+  @include mq(md) {
+    width: rem(620);
+  }
+}
+
+
+.unit-block--store {
+  flex-direction: column-reverse;
+  gap: rem(40);
+  
+  @include mq(md) {
+    flex-direction: row-reverse;
+    gap: rem(76);
+    padding-left: rem(105);
+    padding-right: rem(55);
+  }
+}
+
+
+.unit-block--store .unit-block__text {
+  font-size: rem(18);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  color: #4D4F4F;
+  line-height: 3.1;
+  letter-spacing: 0.24em;
+}
+
+
+.unit-block--store .unit-block__image {
+  aspect-ratio: 515 / 357;
+  object-fit: cover;
+  width: 100%;
+  
+  @include mq(md) {
+    width: rem(515); 
+  }
+}
+
+
+.unit-block--store .unit-block__body {
+  padding-top: rem(20);
+}

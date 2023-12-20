@@ -1,0 +1,42 @@
+@use "global" as *;
+
+
+.news-list {
+  position: relative;
+  padding-top: rem(78);
+}
+
+
+.news-list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/news-list_bg.jpg);
+  background-size: auto;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.news-list__inner.inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(1150);
+  }
+}
+
+
+.news-list__page-nav {
+  justify-content: center;
+  margin-top: rem(70);
+}
+
+
+.news-list__logo-area {
+  margin-top: rem(82);
+}

@@ -1,0 +1,34 @@
+@use "global" as *;
+
+
+.commitment-cuisine {
+  position: relative;
+  padding-top: rem(80);
+  padding-bottom: rem(114);
+  
+  @include mq(md) {
+    padding-top: rem(42);
+  }
+}
+
+
+.commitment-cuisine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/commitment-cuisine_bg.jpg);
+  background-size: inherit;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.commitment-cuisine__inner.inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(1080);
+  }
+}

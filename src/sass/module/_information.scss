@@ -1,0 +1,172 @@
+@use "global" as *;
+
+
+.information {
+  position: relative;
+  padding-top: rem(80);
+  // padding-bottom: rem(50);
+  overflow: hidden;
+}
+
+
+.information__inner {
+  position: relative;
+}
+
+
+.information__inner::before {
+  content: "";
+  position: absolute;
+  top: rem(84);
+  right: rem(-100);
+  background-image: url(../images/common/information_icon1.png);
+  background-size: cover;
+  aspect-ratio: 203 / 66;
+  width: rem(203);
+}
+
+
+.information__inner::after {
+  content: "";
+  position: absolute;
+  left: rem(-200);
+  bottom: rem(55);
+  background-image: url(../images/common/information_icon2.png);
+  background-size: cover;
+  aspect-ratio: 255 / 255;
+  width: rem(255);
+}
+
+
+.information__block {
+  position: relative;
+}
+
+
+.information__block.inner {
+  padding: 0;
+  max-width: rem(600);
+  
+  @include mq(md) {
+    padding: 0 rem(25);
+    max-width: rem(650);
+  }
+}
+
+
+.information__block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: rem(-126);
+  background-image: url(../images/common/information_logo.png);
+  background-size: cover;
+  aspect-ratio: 96 / 326;
+  width: rem(96);
+}
+
+
+.information__image {
+  aspect-ratio: 594 / 309;
+  object-fit: cover;
+  width: 100%;
+  
+  @include mq(md) {
+    width: rem(594);
+  }
+}
+
+
+.information__body {
+  margin-top: rem(20);
+}
+
+
+.information__text {
+  font-size: rem(12);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  color: $black;
+  line-height: 2.5;
+  letter-spacing: 0.3em;
+  font-feature-settings: "palt";
+	-webkit-font-feature-settings: "palt";
+	-moz-font-feature-settings: "palt";
+}
+
+
+.information__ceo-title {
+  font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  color: $black;
+  line-height: 1.5;
+  text-align: right;
+}
+
+
+.information__company {
+  position: relative;
+  padding-top: rem(34);
+  margin-top: rem(50);
+}
+
+
+.information__company::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/information_company-bg.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.information__map.inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(1220);
+  }
+}
+
+
+.information__map iframe {
+  aspect-ratio: 375 / 200;
+  width: 100%;
+
+  @include mq(md) {
+    aspect-ratio: 1280 / 290;
+    object-fit: cover;
+  }
+}
+
+
+.information__logo-area {
+  margin-top: rem(40);
+  
+  @include mq(md) {
+    margin-top: rem(68);
+  }
+}
+
+
+.information__ceo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: rem(16);
+  margin-top: rem(20);
+  // flex-direction: row-reverse;
+}
+
+
+.information__ceo-name {
+  aspect-ratio: 90 / 20;
+  object-fit: cover;
+  width: rem(90);
+}
+

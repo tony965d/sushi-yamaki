@@ -1,0 +1,31 @@
+@use "global" as *;
+
+
+.commitment-pickup {
+  position: relative;
+  padding-top: rem(66);
+  padding-bottom: rem(46);
+}
+
+
+.commitment-pickup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/commiment-pickup_bg.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+
+.commiment-pickup__inner.inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(1250);
+  }
+}

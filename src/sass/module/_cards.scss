@@ -1,0 +1,22 @@
+@use "global" as *;
+
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: rem(32);
+  }
+}
+
+
+.cards--news {
+
+  @include mq(md) {
+    row-gap: rem(108);
+  }
+}

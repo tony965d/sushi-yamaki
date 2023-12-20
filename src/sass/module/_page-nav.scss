@@ -1,0 +1,91 @@
+@use "global" as *;
+
+
+.page-nav {
+  display: flex;
+}
+
+
+// .page-nav__item a {
+//   color: $black;
+//   padding-top: rem(2);
+// }
+
+
+.page-nav__item a:hover {
+  opacity: 0.6;
+}
+
+
+// .page-nav__item.page-nav__item--top a {
+//   color: $black;
+//   background-color: $white;
+//   border: solid 1px $black;
+//   padding-right: rem(18);
+//   padding-left: rem(18);
+//   padding-bottom: rem(3);
+//   margin-left: rem(48);
+//   margin-right: rem(48);
+
+//   @include mq(md) {
+//     padding-right: rem(18);
+//     padding-left: rem(18);
+//     padding-bottom: unset;
+//     margin-right: rem(48);
+//     margin-left: rem(48);
+//   }
+// }
+
+
+.page-nav__item.page-nav__item--prev a {
+  position: relative;
+  display: block;
+  height: 100%;
+  // padding-right: rem(13);
+  // padding-left: rem(13);
+  
+  // @include mq(md) {
+  //   padding-right: rem(13);
+  //   padding-left: rem(13);
+  // }
+}
+
+
+.page-nav__item.page-nav__item--prev a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(225deg);
+  width: rem(12);
+  height: rem(12);
+  border-right: rem(1.65) solid $black;
+  border-top: rem(1.65) solid $black;  
+}
+
+
+.page-nav__item.page-nav__item--next a {
+  position: relative;
+  display: block;
+  height: 100%;
+  // padding-right: rem(13);
+  // padding-left: rem(13);
+  
+  // @include mq(md) {
+  //   padding-right: rem(13);
+  //   padding-left: rem(13);
+  // }
+}
+
+
+.page-nav__item.page-nav__item--next a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(45deg);
+  width: rem(12);
+  height: rem(12);
+  border-right: rem(1.65) solid $black;
+  border-top: rem(1.65) solid $black;
+}

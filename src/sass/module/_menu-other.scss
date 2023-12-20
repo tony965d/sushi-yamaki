@@ -1,0 +1,299 @@
+@use "global" as *;
+ 
+
+.menu-other {
+  position: relative;
+}
+
+
+.menu-other::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/menu-other_bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+
+.menu-other__launch {
+  position: relative;
+}
+
+
+.menu-other__launch::before {
+  content: "";
+  position: absolute;
+  top: rem(26);
+  left: 0;
+  background-image: url(../images/common/launch_bg1.png);
+  background-size: cover;
+  aspect-ratio: 318 / 30;
+  width: rem(318);
+  z-index: -1;
+}
+
+
+.menu-other__launch::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url(../images/common/launch_bg2.png);
+  background-size: cover;
+  aspect-ratio: 266 / 122;
+  width: rem(266);
+  z-index: -10;
+}
+
+
+.menu-other__launch-inner.inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(1150);
+  }
+}
+
+
+.menu-other__launch-header {
+  padding-top: rem(34);
+}
+
+
+.menu-other__launch-menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: rem(16);
+
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
+
+
+.menu-other__launch-image {
+  aspect-ratio: 550 / 360;
+  object-fit: cover;
+  width: 100%;
+  
+  @include mq(md) {
+    width: 50%;
+  }
+}
+
+
+.menu-other__launch-image:nth-of-type(n + 3) {
+  aspect-ratio: 425 / 296;
+  object-fit: cover;
+  width: 80%;
+  
+  @include mq(md) {
+    width: rem(425);
+  }
+}
+
+
+.menu-other__dinner-inner.inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(925);
+  }
+}
+
+
+.menu-other__dinner-header {
+  margin-top: rem(34);
+}
+
+
+.menu-other__dinner-contents {
+  margin-top: rem(30);
+}
+
+
+.menu-other__dinner-image {
+  aspect-ratio: 875 / 446;
+  object-fit: cover;
+  width: 100%;
+  
+  @include mq(md) {
+    width: rem(875);
+  }
+}
+
+
+.menu-other__dinner-block {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(24);
+  padding-top: rem(22);
+  
+  @include mq(md) {
+    flex-direction: row;
+    padding-right: rem(26);
+    padding-left: rem(26);
+  }
+}
+
+
+.menu-other__dinner-body {
+  width: 100%;
+
+  @include mq(md) {
+    width: 58%;
+  }
+}
+
+
+.menu-other__dinner-subtitle {
+  font-size: rem(26);
+  font-family: $base-font-family;
+  font-weight: $bold;
+  color: #231815;
+  line-height: 1.5;
+  letter-spacing: -0.1em;
+  text-align: center;
+  margin: 0;
+  
+  @include mq(md) {
+    font-size: rem(29);
+  }
+}
+
+
+.menu-other__dinner-text {
+  font-size: rem(14);
+  font-family: $base-font-family;
+  font-weight: $bold;
+  color: #231815;
+  line-height: 1.2;
+  letter-spacing: -0.1em;
+  text-align: center;
+  margin-top: rem(14);
+  
+  @include mq(md) {
+    font-size: rem(20);
+  }
+}
+
+
+.menu-other__dinner-unit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  
+  @include mq(md) {
+    width: 42%;
+  }
+}
+
+
+.menu-other__dinner-price {
+  font-size: rem(36);
+  font-family: $base-font-family;
+  font-weight: $bold;
+  color: #231815;
+  line-height: 1.0;
+  letter-spacing: -0.1em;
+  
+  @include mq(md) {
+    font-size: rem(51);
+  }
+}
+
+
+.menu-other__dinner-price span {
+  font-size: rem(18);
+  font-family: $base-font-family;
+  font-weight: $bold;
+  color: #231815;
+  line-height: 1.0;
+  letter-spacing: -0.1em;
+  margin-left: rem(4);
+
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+
+.menu-other__dinner-tax {
+  font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: $bold;
+  color: #231815;
+  line-height: 1.0;
+  letter-spacing: -0.1em;
+  margin-top: rem(14);
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+
+
+.menu-other__area {
+  margin-top: rem(72);
+}
+
+
+.menu-other__area-inner.inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(925);
+  }
+}
+
+
+.menu-other__area-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: rem(60);
+  
+  @include mq(md) {
+    flex-direction: row;
+    gap: rem(30);
+  }
+}
+
+
+.menu-other__box {
+  width: 100%;
+  
+  @include mq(md) {
+    width: 50%;
+  }
+}
+
+
+.menu-other__text {
+  font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  color: $black;
+  line-height: 1.0;
+  text-align: center;
+  margin-top: rem(30);
+}
+
+
+.menu-other__button {
+  text-align: center;
+  margin-top: rem(40);
+}
+
+.menu-other__logo-area {
+  margin-top: rem(120);
+}

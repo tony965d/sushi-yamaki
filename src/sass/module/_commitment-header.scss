@@ -1,0 +1,33 @@
+@use "global" as *;
+
+
+.commitment-header {
+  text-align: center;
+}
+
+
+.commitment-header__title {
+  font-size: rem(24);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  color: $black;
+  line-height: 1.0;
+  
+  @include mq(md) {
+    font-size: rem(38);
+  }
+}
+
+
+.commitment-header__sub-title {
+  font-size: rem(12);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  color: #383535;
+  line-height: 1.0;
+  margin-top: rem(20);
+  
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}

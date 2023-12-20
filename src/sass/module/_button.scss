@@ -1,0 +1,122 @@
+@use "global" as *;
+
+
+.button {
+  position: relative;
+  display: inline-block;
+  color: $white;
+  font-size: rem(14);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-align: center;
+  width: rem(155);
+  background-color: rgba(114, 37, 37, 0.53);
+  padding-top: rem(4);
+  padding-bottom: rem(4);
+  z-index: 0;
+  transition: .3s;
+}
+
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: $white;
+  transition: .3s;
+  z-index: -1;
+}
+
+
+.button:hover {
+  color: rgba(114, 37, 37, 0.53);
+  transition: .3s;
+  z-index: 100;
+}
+
+
+.button:hover::before {
+  width: 100%;
+}
+
+
+.button.button--contact {
+  color: #383737;
+  letter-spacing: 0.001em;
+  background-color: $white;
+  border: solid 1px #383737;
+  width: rem(92);
+}
+
+
+.button.button--news {
+  font-size: rem(16);
+  line-height: 1.0;
+  
+  @include mq(md) {
+    font-size: rem(21);
+  }
+}
+
+
+.button.button--menu {
+  width: rem(180);
+  font-size: rem(16);
+  line-height: 1.0;
+  
+  @include mq(md) {
+    font-size: rem(21);
+  }
+}
+
+
+.button.button--article {
+  font-size: rem(21);
+  padding: 0;
+}
+
+
+.button.button--contact-form {
+  width: rem(223);
+  font-size: rem(18);
+  font-family: $third-font-family;
+  font-weight: $regular;
+  line-height: 1.0;
+  color: #383737;
+  background-color: rgba(255,255,255,0.48);
+  border-radius: rem(6);
+  border: solid 1px #3D3A2E;
+  padding: rem(8) 0;
+  z-index: 0;
+}
+
+
+.button.button--contact-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: $white;
+  border-radius: rem(6);
+  transition: .3s;
+  z-index: -1;
+}
+
+
+.button.button--contact-form .wpcf7-submit {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+.button.button--contact-form .wpcf7-submit:hover {
+  color: #383737;
+  opacity: 0.6;
+}

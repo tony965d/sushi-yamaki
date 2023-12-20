@@ -1,0 +1,121 @@
+@use "global" as *;
+
+
+.footer__container {
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/footer_bg.png);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+.footer__inner.inner {
+
+  @include mq(md) {
+    max-width: rem(1260);
+    padding-right: clamp(54px, 6.8vw, 87px);
+  }
+}
+
+
+.footer__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: rem(20);
+  padding-top: rem(32);
+  padding-bottom: rem(44);
+  
+  @include mq(md) {
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 0;
+  }
+}
+
+
+.footer__block-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  // gap: rem(52);
+  gap: clamp(10px, 3vw, 50px);
+
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
+
+
+.footer__postal-code {
+  font-size: rem(18);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  color: #30302E;
+  line-height: 1.0;
+}
+
+
+.footer__address-line {
+  font-size: rem(18);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  color: #30302E;
+  line-height: 1.2;
+  margin-top: rem(12);
+}
+
+
+.footer__tel {
+  display: flex;
+  align-items: center;
+  column-gap: rem(8);
+}
+
+
+.footer__tel-icon {
+  aspect-ratio: 22 / 28;
+  object-fit: cover;
+  width: rem(22);
+}
+
+
+.footer__tel-icon img {
+  height: 100%;
+}
+
+
+.footer__tel-number {
+  font-size: rem(24);
+  font-family: $base-font-family;
+  font-weight: $medium;
+  color: #383737;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+}
+
+
+.footer__bg img {
+  height: rem(67);
+  object-fit: cover;
+}
+
+
+.footer__copyright {
+  font-size: rem(11);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  line-height: 1.5;
+  text-align: center;
+  color: $white;
+  background-color: $black;
+  padding-top: rem(11);
+  padding-bottom: rem(11);
+  
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}
+

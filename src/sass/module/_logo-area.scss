@@ -1,0 +1,69 @@
+@use "global" as *;
+
+
+.logo-area {
+  padding-bottom: rem(30);
+}
+
+
+.logo-area__inner.inner {
+
+  @include mq(md) {
+    max-width: rem(1180);
+  }
+}
+
+
+.logo-area__inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+
+.logo-area__inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url(../images/common/logo-area_bg.png);
+  background-size: cover;
+  width: rem(265);
+  aspect-ratio: 265 / 122;
+  z-index: -1;
+}
+
+
+.logo-area__inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/logo-area_bg.png);
+  background-size: cover;
+  width: rem(265);
+  aspect-ratio: 265 / 122;
+  z-index: -1;
+}
+
+
+.logo-area__image {
+  aspect-ratio: 214 / 94;
+  object-fit: cover;
+  width: rem(214);
+}
+
+
+.logo-area__image img {
+  height: 100%;
+}
+
+
+.logo-area--two-columns .logo-area__inner::after {
+  left: rem(-140);
+}
+
+
+.logo-area--two-columns .logo-area__inner::before {
+  display: none;
+}

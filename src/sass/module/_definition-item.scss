@@ -1,0 +1,87 @@
+@use "global" as *;
+
+
+.definition-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  // gap: rem(40);
+  padding: rem(16) 0; 
+  border-bottom: solid 1px #C07D76;
+
+  @include mq(md) {
+    // gap: rem(92);
+  }
+}
+
+
+.definition-item__name {
+  color: $black;
+  font-size: rem(14);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  color: #4D4F4F;
+  line-height: 1.0;
+  letter-spacing: 0.38em;
+  width: 44%;
+
+  @include mq(md) {
+    font-size: rem(21);
+  }
+}
+
+
+.definition-item__text {
+  color: $black;
+  font-size: rem(14);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  color: #4D4F4F;
+  line-height: 1.5;
+  letter-spacing: 0.38em;
+  width: 56%;
+}
+
+
+.definition-item__body {
+  display: flex;
+  flex-direction: column;
+  gap: rem(14);
+  width: 56%;
+}
+
+
+.definition-item__date {
+  display: flex;
+  flex-direction: column;
+  font-size: rem(12);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  color: #4D4F4F;
+  line-height: 1.5;
+  letter-spacing: 0.38em;
+  // gap: rem(16);
+
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
+
+
+.definition-item__date-title {
+  width: 100%;
+
+  @include mq(md) {
+    width: 30%;
+  }
+}
+
+
+.definition-item__date-time {
+  width: 100%;
+
+  @include mq(md) {
+    width: 70%;
+  }
+}
+

@@ -1,0 +1,157 @@
+@use "global" as *;
+
+
+.menu__container {
+  position: relative;
+}
+
+
+.menu__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/menu_bg.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.menu__inner.inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(1150);
+  }
+}
+
+
+.menu__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: rem(40);
+  // padding-top: rem(42);
+  padding-bottom: rem(32);
+  
+  @include mq(md) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: unset;
+  }
+}
+
+
+.menu__image {
+  position: relative;
+  height: rem(170);
+  width: 100%;
+
+  @include mq(md) {
+    width: 61%;
+    height: unset;
+  }
+}
+
+
+.menu__image::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../images/common/menu_sushi-1.png);
+  background-size: cover;
+  aspect-ratio: 575 / 302;
+  width: clamp(300px, 60%, 600px);
+  
+  @include mq(md) {
+    top: rem(-56);
+    left: 0;
+    width: rem(575);
+    transform: unset;
+  }
+}
+
+
+.menu__image::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../images/common/menu_sushi-2.png);
+  background-size: cover;
+  aspect-ratio: 620 / 315;
+  width: clamp(300px, 60%, 600px);
+  
+  @include mq(md) {
+    top: unset;
+    left: 0;
+    bottom: rem(-82);
+    width: rem(620);
+    transform: unset;
+  }
+}
+
+
+.menu__contents {
+  width: 100%;
+  
+  @include mq(md) {
+    width: 39%;
+    // margin-left: 50%;
+  }
+}
+
+
+.menu__body {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  // gap: rem(40);
+
+  @include mq(md) {
+    justify-content: unset;
+  }
+}
+
+
+.menu__icon {
+  margin-top: rem(20);
+} 
+
+
+.menu__icon img {
+  aspect-ratio: 248 / 248;
+  object-fit: cover;
+  width: rem(248);
+}
+
+
+.menu__sub-title {
+  font-size: rem(20);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  color: #563407;
+  line-height: 2.0;
+  letter-spacing: 0.08em;
+  writing-mode: vertical-rl;
+  margin-top: rem(68);
+  
+  @include mq(md) {
+    font-size: rem(27);
+  }
+}
+
+
+.menu__button {
+  text-align: center;
+  margin-top: rem(40);
+  
+  @include mq(md) {
+    text-align: left;
+    margin-left: rem(22);
+  }
+}

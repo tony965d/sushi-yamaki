@@ -1,0 +1,135 @@
+@use "global" as *;
+
+
+.commitment-soySauce__container {
+  position: relative;
+  padding-top: rem(104);
+  padding-bottom: rem(26);
+}
+
+
+.commitment-soySauce__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/commitment-soySauce_bg.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.commitment-soySauce__container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: -1;
+}
+
+
+.commitment-soySauce__inner.inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(1150);
+  }
+}
+
+
+
+.commitment-soySauce__body {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(66);
+}
+
+
+.commitment-soySauce__text {
+  font-size: rem(16);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  color: #4D4F4F;
+  line-height: 2.8;
+  letter-spacing: 0.38em;
+  
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}
+
+
+.commitment-soySauce__images {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  margin-top: rem(40);
+  
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: rem(44);
+    margin-top: rem(66);
+  }
+}
+
+
+.commitment-soySauce__image {
+  aspect-ratio: 337 / 224;
+  object-fit: cover;
+}
+
+
+.commitment-soySauce__image img {
+  height: 100%;
+}
+
+
+.commitment-soySauce__button {
+  text-align: center;
+  margin-top: rem(70);
+}
+
+
+.commitment-soySauce__area {
+  position: relative;
+  padding-top: rem(20);
+}
+
+
+.commitment-soySauce__area::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/commitment-soySauce__area-bg.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.commitment-soySauce__area-inner.inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(1150);
+  }
+}
+
+
+.commitment-soySauce__area-image {
+  aspect-ratio: 1100 / 562;
+  object-fit: cover;
+}
+
+
+.commitment-soySauce__logo-area {
+  margin-top: rem(30);
+}

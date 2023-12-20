@@ -1,0 +1,55 @@
+@use "global" as *;
+
+
+.thanks {
+  position: relative;
+}
+
+
+.thanks::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/information-contact_bg.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.thanks__inner.inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(1150);
+  }
+}
+
+
+.thanks__body {
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+}
+
+
+.thanks__title {
+  font-size: rem(24);
+  font-family: $second-font-family;
+  font-weight: $bold;
+  color: $black;
+  line-height: 1.5;
+  text-align: center;
+}
+
+
+.thanks__text {
+  font-size: rem(16);
+  font-family: $second-font-family;
+  font-weight: $normal;
+  color: $black;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: rem(40);
+}

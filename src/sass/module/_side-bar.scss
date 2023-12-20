@@ -1,0 +1,27 @@
+@use "global" as *;
+
+
+.side-bar__contents {
+  margin-top: rem(28);
+}
+
+
+.side-bar__contents:first-of-type {
+  margin-top: 0;
+}
+
+
+.side-bar__title {
+  font-size: rem(13);
+  font-family: $second-font-family;
+  font-weight: $medium;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0.12em;
+}
+
+
+.side-bar__items {
+  margin-top: rem(24);
+}
+
