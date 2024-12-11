@@ -9,7 +9,7 @@
   </section>
 
   <section class="news-list">
-    <div class="news-list__news-header news-header js-fadeUp">
+    <div class="news-list__news-header news-header hidden js-fadeUp">
       <div class="news-header__inner inner">
         <h2 class="news-header__title">新着情報</h2>
       </div>
@@ -21,7 +21,7 @@
       <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); ?>
         <a href="<?php the_permalink(); ?>" class="cards__card card">
-          <figure class="card__image js-fadeUp">
+          <figure class="card__image hidden js-fadeUp">
             <?php if (has_post_thumbnail()) { ?>
             <?php the_post_thumbnail('full'); ?>
             <?php } else { ?>

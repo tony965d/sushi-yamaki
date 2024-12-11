@@ -9,7 +9,7 @@
   </section>
 
   <section class="news-list">
-    <div class="news-list__news-header news-header">
+    <div class="news-list__news-header news-header hidden js-fadeUp">
       <div class="news-header__inner inner">
         <h2 class="news-header__title">新着情報</h2>
       </div>
@@ -19,15 +19,15 @@
       <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); ?>
         <a href="<?php the_permalink(); ?>" class="cards__card card">
-          <figure class="card__image">
+          <figure class="card__image hidden js-fadeUp">
             <?php if (has_post_thumbnail()) { ?>
             <?php the_post_thumbnail('full'); ?>
             <?php } else { ?>
             <?php } ?>
           </figure>
           <div class="card__header">
-            <time datetime="<?php the_time('c'); ?>" class="card__date"><?php the_time('Y.m.d'); ?></time>
-            <p class="card__title"><?php the_title(); ?></p>
+            <time datetime="<?php the_time('c'); ?>" class="card__date js-fadeUp"><?php the_time('Y.m.d'); ?></time>
+            <p class="card__title js-fadeUp"><?php the_title(); ?></p>
           </div>
         </a>
       <?php endwhile; ?>

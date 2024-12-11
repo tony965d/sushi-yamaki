@@ -11,14 +11,14 @@
   <section class="information-store">
     <div class="information-store__inner inner">
       <div class="information-store__container">
-        <div class="information-store__information-section-header information-section-header js-fadeUp">
+        <div class="information-store__information-section-header information-section-header hidden js-fadeUp">
           <h2 class="information-section-header__title">店舗情報 </h2>
         </div>
         <div class="information-store__block unit-block unit-block--store">
-          <div class="unit-block__image js-fadeLeft">
+          <div class="unit-block__image hidden js-fadeLeft">
             <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/store1.jpg" alt="">
           </div>
-          <div class="unit-block__body js-fadeUp">
+          <div class="unit-block__body hidden js-fadeUp">
             <div class="unit-block__text">
               寿司やまきはおいしいに欠かせない<br>
               それらの時間や手間を<br>

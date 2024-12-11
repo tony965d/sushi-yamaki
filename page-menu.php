@@ -12,10 +12,10 @@
     <div class="menu-sushi__inner inner">
 
       <div class="menu-sushi__block sushi-block sushi-block--maguro">
-        <div class="sushi-block__header js-fadeUp">
+        <div class="sushi-block__header hidden js-fadeUp">
           <h3 class="sushi-block__title">まぐろ</h3>
         </div>
-        <div class="sushi-block__body js-fadeUp">
+        <div class="sushi-block__body hidden js-fadeUp">
           <div class="sushi-block__image">
             <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/maguro1.png" alt="">
           </div>

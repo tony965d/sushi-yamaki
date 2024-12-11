@@ -11,10 +11,10 @@
   <section class="commitment-about">
     <div class="commitment-about__inner inner">
       <div class="commitment-about__block commitment-block">
-        <div class="commitment-block__image js-fadeLeft">
+        <div class="commitment-block__image hidden js-fadeLeft">
           <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/commitment-block1.jpg" alt="">
         </div>
-        <div class="commitment-block__body js-fadeUp">
+        <div class="commitment-block__body hidden js-fadeUp">
           <h3 class="commitment-block__title">寿司やまきのこだわり</h3>
           <p class="commitment-block__text">
             とびきり新鮮なネタに、近江米コシヒカリや調味料を吟味、そして素材を生かす技。<br>

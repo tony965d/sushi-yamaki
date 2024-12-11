@@ -14,8 +14,8 @@
 
         <div class="two-columns__article article">
           <div class="article__header">
-            <time datetime="<?php the_time('c'); ?>" class="article__date js-fadeUp"><?php the_time('Y.m.d'); ?></time>
-            <div class="article__category js-fadeUp">
+            <time datetime="<?php the_time('c'); ?>" class="article__date hidden js-fadeUp"><?php the_time('Y.m.d'); ?></time>
+            <div class="article__category hidden js-fadeUp">
               <?php 
                 $terms = get_the_terms($post->ID,'category') ;
                 foreach($terms as $term) {
@@ -24,8 +24,8 @@
               ?>
             </div>
           </div>
-          <h2 class="article__title js-fadeUp"><?php the_title(); ?></h2>
-          <div class="article__thumbnail js-fadeUp">
+          <h2 class="article__title hidden js-fadeUp"><?php the_title(); ?></h2>
+          <div class="article__thumbnail hidden js-fadeUp">
             <?php if (has_post_thumbnail()) { ?>
             <?php the_post_thumbnail('full'); ?>
             <?php } else { ?>
@@ -82,7 +82,7 @@
           </div>
         </div>
         <div class="two-columns__side-bar side-bar">
-          <nav class="side-bar__contents js-fadeLeft">
+          <nav class="side-bar__contents hidden js-fadeLeft">
             <h4 class="side-bar__title">【CATEGORY】</h4>
             <ul class="side-bar__items side-categories">
               <?php
